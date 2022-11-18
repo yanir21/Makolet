@@ -46,6 +46,6 @@ export const data: Product[] = [
     store: "Shufersal",
     anotherImageUrl:
       "https://tastesbetterfromscratch.com/wp-content/uploads/2020/03/Bread-Recipe-5-2.jpg",
-    description: "Nice red tomatos for salad",
+    description: "Nice Bread for toasts",
   },
 ];
