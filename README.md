@@ -1,4 +1,4 @@
-# Web Apllications course 1st Excercise 
+# Web Applications course 1st Excercise 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
