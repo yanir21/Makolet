@@ -1,6 +1,6 @@
 import React from "react";
-import { Product } from "../../data";
 import Card from "react-bootstrap/Card";
+import { Product } from "../../models/Product";
 
 const ProductCard = (product: Product) => {
   return (
