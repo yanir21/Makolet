@@ -1,6 +1,7 @@
 // @/main.js
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 const { Product } = require("./models/product");
 const { ShoppingCart } = require("./models/shoppingCart");
 require("dotenv").config();
@@ -8,6 +9,7 @@ require("dotenv").config();
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
 const username = process.env.MONGO_USERNAME;
 const password = process.env.MONGO_PASSWORD;
