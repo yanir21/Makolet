@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import AppNavbar from "./components/Navbar/navbar";
 import Home from "./components/Views/HomePage/homePage";
 import Cart from "./components/Views/Cart/cart";
+import "bootstrap/dist/css/bootstrap.css";
 
 function App() {
   return (
