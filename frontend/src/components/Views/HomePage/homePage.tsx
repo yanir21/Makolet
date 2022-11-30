@@ -4,7 +4,12 @@ import { getAllProducts } from "../../../services/cartService";
 import ProductCard from "../../ProductCard/productCard";
 import "./homepage.css";
 
-const Home = () => {
+interface HomePageProps {
+  onProductAdd: (product: Product) => void;
+  onProductRemove: (product: Product) => void;
+}
+
+const Home = (props: HomePageProps) => {
   const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
@@ -14,6 +19,7 @@ const Home = () => {
   const loadProducts = async () => {
     setProducts(await getAllProducts());
   };
+
   return (
     <div className="home">
       <div className="container">
@@ -21,8 +27,12 @@ const Home = () => {
         <div className="product-list">
           <div className="row">
             {products.map((product) => (
-              <div className="col-4">
-                <ProductCard key={product.name} {...product} />
+              <div key={product.name} className="col-4">
+                <ProductCard
+                  product={product}
+                  onProductAdd={props.onProductAdd}
+                  onProductRemove={props.onProductRemove}
+                />
               </div>
             ))}
           </div>
